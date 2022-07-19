@@ -100,7 +100,7 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 ### Must-have features
 
 - -[ ] Make a UI that makes it easy for people to send messages in this chatroom.
-- -[ ]  must be possible to send a message to everyone or to yourself
+- -[x]  must be possible to send a message to everyone or to yourself
 - -[ ] Make sure we can identify who sent the message through a username.
     - -[ ] We could make a local variable and prompt the user to choose a username
     - -[ ] We can then emit this username along with the sent message to keep track of who sent what.
