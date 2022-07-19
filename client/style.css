@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+button#sendToAll{
+    background-color: lightskyblue;
+    color: red;
+}
+
+button#sendToMe{
+    background-color: greenyellow;
+    color: red;
+}
+
+div.target{
+    background-color: darkblue;
+    color: mediumseagreen;
+}
+
+.chatroom{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
