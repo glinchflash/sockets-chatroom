@@ -15,6 +15,7 @@ button#sendToMe{
 div.target{
     background-color: darkblue;
     color: mediumseagreen;
+    overflow: hidden;
 }
 
 .chatroom{
