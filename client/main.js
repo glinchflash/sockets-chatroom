@@ -4,10 +4,6 @@ let socket = io.connect();
 function displayMessageToAll() {
     let message = document.getElementById('input').value;
     socket.emit('sendToAll', (message)); //send the message to the server
-    console.log(message);
-    socket.on('displayMessage', (message) => { //display the message back into the socket
-        target.innerHTML += '<br>'+message;
-    })
 }
 
 document.getElementById('sendToAll').addEventListener("click",displayMessageToAll);
@@ -16,11 +12,12 @@ document.getElementById('sendToAll').addEventListener("click",displayMessageToAl
 function displayMessageToMe() {
     let message = document.getElementById('input').value;
     socket.emit('sendToMe', (message));//send the message to the server
-    console.log(message);
-    socket.on('displayMessage', (message) => {//display the message back into the socket
-        target.innerHTML += '<br>'+message;
-    })
+
 }
 
 document.getElementById('sendToMe').addEventListener("click",displayMessageToMe);
 
+//displaying
+socket.on('displayMessage', (message) => {//display the message back into the socket
+    target.innerHTML += '<br>'+message;
+})
