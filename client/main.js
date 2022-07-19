@@ -29,10 +29,3 @@ document.getElementById('sendToMe').addEventListener("click",displayMessageToMe)
 socket.on('displayMessage', (message) => {//display the message back into the socket
     target.innerHTML += '<br>'+message;
 })
-
-
-
-
-// socket.on('displayMessage', (joinedMsg) => {//display the message back into the socket
-//     target.innerHTML += '<br>'+joinedMsg;
-// })
