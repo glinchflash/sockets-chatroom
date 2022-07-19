@@ -1,16 +1,17 @@
 let socket = io.connect();
 //ask username and check if there is an answer
+let username;
 do {
     username = window.prompt('please give your username');
-}while (username==="")
+} while (username === "")
 
 //display which user has joined in chat
-let message = username+' has joined the chat!';
+let message = '<span id="user" style="color: red">'+username+ '</span>'+' has joined the chat!';
 socket.emit('sendToAll', (message));
 
 //to send to all people
 function displayMessageToAll() {
-    let message =username+': '+ document.getElementById('input').value;
+    let message ='<span id="user" style="color: red">'+username+ '</span>'+': '+ document.getElementById('input').value;
     socket.emit('sendToAll', (message)); //send the message to the server
 }
 
