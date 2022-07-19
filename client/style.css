@@ -1,21 +1,26 @@
 body{
     background-color: black;
+    color: lightskyblue;
 }
 
 button#sendToAll{
     background-color: lightskyblue;
-    color: red;
+    color: black;
 }
 
 button#sendToMe{
-    background-color: greenyellow;
-    color: red;
+    background-color: darkblue;
+    color: white;
 }
 
 div.target{
-    background-color: darkblue;
-    color: mediumseagreen;
+    background-color: lightgrey;
+    color: blue;
     overflow: hidden;
+    border: darkblue 2px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
 }
 
 .chatroom{
