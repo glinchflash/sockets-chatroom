@@ -135,4 +135,4 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 ### Issues I came across
 - Basic struggles with the npm having some errors but got them fixed relatively easily
 - When sending messages (both to all or to myself) they increment after every message send
-  - still not fixed.
+  - made the display only happens once by getting the display code out of the functions
