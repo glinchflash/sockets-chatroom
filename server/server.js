@@ -18,7 +18,7 @@ const io = require('socket.io')(server);
 //counter for the amount of people connected
 let counter = 1;
 io.on('connection', (socket) => {
-    console.log(counter+' person/people connected'); //console log in the server goes to the terminal
+    console.log('people connected: '+counter); //console log in the server goes to the terminal
     counter++;
     socket.on('sendToAll', (message) =>{ //get message from socket to send to all
         io.emit("displayMessage", (message)); //send back the message to all people connected to the server
