@@ -17,16 +17,38 @@ div.target{
     background-color: lightgrey;
     color: blue;
     overflow: hidden;
-    border: darkblue 2px;
-    width: 50%;
+    border: solid darkblue 2px;
+    width: 80%;
     height: 50%;
     margin: auto;
 }
 
-.chatroom{
+.chat{
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-height: 100vh;
+}
+
+
+div.onlineUsers{
+    background-color: lightgrey;
+    color: blue;
+    overflow: hidden;
+    border: solid darkblue 2px;
+    width: 10%;
+    height: 10%;
+    margin-top: 2.5em;
+    float: right;
+}
+
+div.chatroom{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+h3{
+    text-decoration: underline;
 }
