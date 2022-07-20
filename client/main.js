@@ -9,11 +9,20 @@ do {
 let message = '<span id="user" style="color: red">'+username+ '</span>'+' has joined the chat!';
 socket.emit('sendToAll', (message));
 
+// press enter to send message to all
+document.getElementById('input').addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        document.getElementById('sendToAll').click();
+    }
+});
+
 //to send to all people
 function displayMessageToAll() {
     let message ='<span id="user" style="color: red">'+username+ '</span>'+': '+ document.getElementById('input').value;
     socket.emit('sendToAll', (message)); //send the message to the server
 }
+
 
 document.getElementById('sendToAll').addEventListener("click",displayMessageToAll);
 
@@ -26,7 +35,7 @@ function displayMessageToMe() {
 
 document.getElementById('sendToMe').addEventListener("click",displayMessageToMe);
 
-//displaying
+//displaying messages
 socket.on('displayMessage', (message) => {//display the message back into the socket
     target.innerHTML += '<br>'+message;
-})
+});
