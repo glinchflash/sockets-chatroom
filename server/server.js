@@ -15,6 +15,7 @@ server.listen(8080, () =>{
 });
 //require socket.io and make our io variable the entry point of all clients/sockets connecting to our server
 const io = require('socket.io')(server);
+let usernames = [];
 //counter for the amount of people connected
 let counter = 0;
 io.on('connection', (socket) => {
@@ -25,5 +26,9 @@ io.on('connection', (socket) => {
     });
     socket.on('sendToMe', (message) =>{ //get message from socket to send back to the same socket
         socket.emit("displayMessage", (message)); //only send back to the original socket
+    });
+    socket.on('sendToList', (username)=>{ //get username from socket to send back to the same socket
+        usernames.push(username) // push username received from client into usernames array
+        io.emit("displayList", (usernames)) //return the usernames array to the client
     });
 });
