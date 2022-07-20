@@ -16,15 +16,14 @@ server.listen(8080, () =>{
 //require socket.io and make our io variable the entry point of all clients/sockets connecting to our server
 const io = require('socket.io')(server);
 //counter for the amount of people connected
-let counter = 1;
+let counter = 0;
 io.on('connection', (socket) => {
-    console.log('people connected: '+counter); //console log in the server goes to the terminal
     counter++;
+    console.log('people connected: '+counter); //console log in the server goes to the terminal
     socket.on('sendToAll', (message) =>{ //get message from socket to send to all
         io.emit("displayMessage", (message)); //send back the message to all people connected to the server
     });
     socket.on('sendToMe', (message) =>{ //get message from socket to send back to the same socket
         socket.emit("displayMessage", (message)); //only send back to the original socket
     });
-
 });
