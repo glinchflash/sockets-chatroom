@@ -127,6 +127,13 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
     - -[ ] again, security is not a must
 - -[ ] PIMP IT
 
+
+
+### own nice to haves
+- hover over text on buttons to show keybinding shortcut
+- shift+Enter to send to self
+
+
 ### What did I learn
 - How to setup a server and connect multiple clients to it
 - How to install express and socket.io
