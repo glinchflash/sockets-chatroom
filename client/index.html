@@ -7,16 +7,20 @@
 </head>
 <body>
 <div class="chatroom">
-    <div class="input">
-        <label for="input">Your message here!</label>
-        <input type="text" name="inputfield" id="input">
-        <button class="sendToAll" id="sendToAll">send to all</button>
-        <button class="sendToMe" id="sendToMe">send to yourself</button>
+    <div class="chat">
+        <div class="input">
+            <label for="input">Your message here!</label>
+            <input type="text" name="inputfield" id="input">
+            <button class="sendToAll" id="sendToAll">send to all</button>
+            <button class="sendToMe" id="sendToMe">send to yourself</button>
+        </div>
+        <div class="target" id="target"></div>
     </div>
-<div class="target" id="target"></div>
+    <div class="onlineUsers">
+        <h3>Online users:</h3>
+        <div id="userlist"></div>
+    </div>
 </div>
-
-
 <!--scripts-->
 <script src="/socket.io/socket.io.js"></script>
 <script src="main.js"></script>
