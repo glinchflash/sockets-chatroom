@@ -104,11 +104,9 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 - -[x] Make sure we can identify who sent the message through a username.
     - -[x] We could make a local variable and prompt the user to choose a username
     - -[x] We can then emit this username along with the sent message to keep track of who sent what.
-- -[ ] Make a list to show everyone who is connected to the chatroom
+- -[x] Make a list to show everyone who is connected to the chatroom
 - -[ ] Implement something funny! The sky is the limit! (it can be very simple if you want)
-    - -[ ] For example, you could make a functionality to make someone else's font size obscurely small!
-    - -[ ] You could implement a feature where you can speak with someone else's username
-    - -[ ] AND SO MUCH MORE -> BE CREATIVE
+
 
 ### Nice-to-have features
 
@@ -130,8 +128,12 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 
 
 ### own nice to haves
-- hover over text on buttons to show keybinding shortcut
-- shift+Enter to send to self
+- -[x] hover over text on buttons to show keybinding shortcut
+- -[x] shift+Enter to send to self
+- -[x] put chatbox into scroll box 
+- -[x] make chatbox go to latest message automatically
+- -[x] make chatbox stop going to latest message when scrolling
+- -[ ] be able to go to new line (break line) in chat 
 
 
 ### What did I learn
