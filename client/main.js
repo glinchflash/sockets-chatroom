@@ -88,17 +88,17 @@ document.getElementById('sendToMe').addEventListener("click", displayMessageToMe
 socket.on('displayList', (usernames) => { // receive usernames array from server
     if (!userlist.innerHTML) { //if the list is empty on the client side do the for each
         usernames.forEach(username => {  //loop through list
-            userlist.innerHTML += '<br>' + username;  // each username get displayed
+            userlist.innerHTML += username + '<br>' ;  // each username get displayed
         });
     } else {                              //if the client already has online users add the new online user(s) to the list
-        userlist.innerHTML += '<br>' + usernames[usernames.length - 1];
+        userlist.innerHTML += '<br>' + usernames[usernames.length - 1] ;
     }
 });
 
 
 //displaying messages
 socket.on('displayMessage', (message) => {//display the message back into the socket
-    target.innerHTML += '<br>' + message;
+    target.innerHTML += message + '<br>' ;
     target.scrollTop = target.scrollHeight;
 });
 
