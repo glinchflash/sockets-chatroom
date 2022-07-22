@@ -18,7 +18,7 @@ const io = require('socket.io')(server);
 // variable for array of users
 let usernames = [];
 // variable for user in server to log out
-let serverUser;
+
 //counter for the amount of people connected
 let counter = 0;
 io.on('connection', (socket) => {
@@ -32,8 +32,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('sendToList', (username)=>{ //get username from socket to send back to the same socket
-        serverUser = username;
-        socket.username = serverUser
+        socket.username = username;
         usernames.push(username); // push username received from client into usernames array
         io.emit("displayList", (usernames)) //return the usernames array to the client
     });
