@@ -105,7 +105,7 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
     - -[x] We could make a local variable and prompt the user to choose a username
     - -[x] We can then emit this username along with the sent message to keep track of who sent what.
 - -[x] Make a list to show everyone who is connected to the chatroom
-- -[ ] Implement something funny! The sky is the limit! (it can be very simple if you want)
+- -[x] Implement something funny! The sky is the limit! (it can be very simple if you want)
 
 
 ### Nice-to-have features
@@ -123,7 +123,7 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 - -[ ] Bring back some features from MSN! (lol)
 - -[ ] Make a login / registration (a bit more difficult)
     - -[ ] again, security is not a must
-- -[ ] PIMP IT
+- -[x] PIMP IT
 
 
 
