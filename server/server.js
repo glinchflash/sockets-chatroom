@@ -30,15 +30,17 @@ io.on('connection', (socket) => {
     socket.on('sendToMe', (message) =>{ //get message from socket to send back to the same socket
         socket.emit("displayMessage", (message)); //only send back to the original socket
     });
+
     socket.on('sendToList', (username)=>{ //get username from socket to send back to the same socket
         serverUser = username;
-        usernames.push(username) // push username received from client into usernames array
+        socket.username = serverUser
+        usernames.push(username); // push username received from client into usernames array
         io.emit("displayList", (usernames)) //return the usernames array to the client
     });
     socket.on("disconnecting", () => { //get the socket that was disconnected
         counter--; // reduces counter by 1
         console.log("user has left: " + counter + " are connected"); //log in console (terminal)
-        usernames = removeItemOnce(usernames , serverUser); //remove user from array
+        usernames = removeItemOnce(usernames , socket.username); //remove user from array
         io.emit("displayRemovedUsers", usernames); //push back to clients
     });
 });
