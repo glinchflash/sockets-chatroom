@@ -64,7 +64,7 @@ addEventListener("keyup", (e) => {
 
 //to send to all people
 function displayMessageToAll() {
-    let message = '<span id="user" style="color: red">' + username + '</span>' + ': ' + document.getElementById('input').value;
+    let message = '<span id="user" style="color: red">' + username + '</span>: '  + document.getElementById('input').value;
     socket.emit('sendToAll', (message)); //send the message to the server
 }
 
