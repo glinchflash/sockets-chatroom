@@ -56,7 +56,6 @@ socket.emit('sendToAll', (message));
 
 let input = document.getElementById('input');
 
-
 // press enter to send message to all
 document.getElementById('input').addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
@@ -104,6 +103,7 @@ function displayMessageToAll() {
         default:
             input.value = document.getElementById('input').value;
     }
+
 
     let message = '<span id="user" style="color: red">' + username + '</span>: '  + input.value;
     socket.emit('sendToAll', (message)); //send the message to the server
