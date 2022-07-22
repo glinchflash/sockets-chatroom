@@ -133,7 +133,6 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 - -[x] put chatbox into scroll box 
 - -[x] make chatbox go to latest message automatically
 - -[x] make chatbox stop going to latest message when scrolling
-- -[ ] be able to go to new line (break line) in chat 
 
 
 ### What did I learn
@@ -145,3 +144,5 @@ Now that you guys know how to configure a node server, let's make a chatroom to 
 - Basic struggles with the npm having some errors but got them fixed relatively easily
 - When sending messages (both to all or to myself) they increment after every message send
   - made the display only happens once by getting the display code out of the functions
+- When trying to get a display of the online users I came across the issue that the list would or not show people logged in already, or would increment
+    tried solving with a if statement, checking if the list was empty or not and work accordingly, learned the hard way that a div with a "Enter" in it isn't an empty div
