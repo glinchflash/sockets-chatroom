@@ -108,6 +108,6 @@ socket.on('displayMessage', (message) => {//display the message back into the so
 socket.on("displayRemovedUsers", (usernames) =>{ //display the userslist back into the online user list after being altered
     userlist.innerHTML = "";
     usernames.forEach(username =>{
-        userlist.innerHTML += '<br>' + username;
+        userlist.innerHTML += username+ '<br>';
     })
 })
