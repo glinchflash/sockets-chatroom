@@ -1,7 +1,17 @@
 body{
-    background-color: black;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: lightskyblue;
 }
+
+header{
+    text-align: center;
+    font-size:xxx-large;
+    margin-bottom: 2em;
+    text-decoration:underline;
+}
+
 
 button#sendToAll{
     background-color: lightskyblue;
@@ -13,14 +23,16 @@ button#sendToMe{
     color: white;
 }
 
-div.target{
-    background-color: lightgrey;
-    color: blue;
+div.target {
+    background-color: #002A40;
+    color: cyan;
     overflow-y: scroll;
-    border: solid darkblue 2px;
+    border: solid cyan 3px;
     width: 80%;
     height: 90%;
-    margin: auto;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
 }
 
@@ -34,14 +46,20 @@ div.target{
 
 
 div.onlineUsers{
-    background-color: lightgrey;
-    color: blue;
-    overflow: hidden;
-    border: solid darkblue 2px;
+    background-color: #002A40;
+    color: red;
+    border: solid cyan 3px;
     width: 10%;
     height: 10%;
-    margin-top: 2.5em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
     float: right;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+div#userslist{
+    margin-bottom: 2em;
 }
 
 div.chatroom{
@@ -54,6 +72,7 @@ div.chatroom{
 
 h3{
     text-decoration: underline;
+    margin-top: 1em;
 }
 
 
